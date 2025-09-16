@@ -80,7 +80,30 @@ public class Main {
         paisArgentina.getProvincias().add(Cordoba);
 
         //Localidad para cordoba
-        Localidad cordobaCapital = new Localidad(1,"Cordoba Capital",Cordoba, new HashSet<>());
+        Localidad cordobaCapital = Localidad.builder()
+                .id(3)
+                .nombre("Cordoba Capital")
+                .provincia(Cordoba)
+                .build();
+        Cordoba.getLocalidades().add(cordobaCapital);
+
+        //Creando una empresa y asociando la sucursal
+        Empresa empresa = Empresa.builder()
+                .id(1)
+                .nombre("CuyoTecno")
+                .razonSocial("CuyoTecno SRL")
+                .logo("Logologo")
+                .cuit(20345678902L)
+                .build();
+        empresa.getSucursales().add(sucursal1);
+
+
+        //Mostrando por pantalla
+        System.out.println("Empresa: " + empresa.getNombre());
+        System.out.println("Pais" + paisArgentina.getNombre());
+        System.out.println("Provincia" + buenosAires.getNombre());
+        System.out.println("Localidad" + LaPlata.getNombre());
+        System.out.println("Domicilio" + domicilioCaba.getCalle());
 
     }
 }
