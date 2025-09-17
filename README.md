@@ -1,4 +1,6 @@
 Trabajo practico de Traza correspondiente a la catedra de desarrollo de software. Realizado por Matias Fernandez, alumno de 3k10
+
+
 El objetivo de este trabajo práctico es implementar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre una entidad Empresa, utilizando buenas prácticas de programación en Java. Para ello se aplicó:
   Separación entre modelo y servicio.
   Uso de Lombok para simplificar código repetitivo.
